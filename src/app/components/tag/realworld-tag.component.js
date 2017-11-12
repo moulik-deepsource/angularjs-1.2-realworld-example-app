@@ -21,6 +21,8 @@
             console.log("@Error: Data coul not be fetched at the moment");
         });
     };
+
+    Component.$injector = ['TagModel'];
     
     var Directive = {
         scope           : {
