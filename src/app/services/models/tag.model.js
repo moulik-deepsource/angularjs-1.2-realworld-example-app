@@ -1,37 +1,58 @@
 (function () {
 
-    var BASE_URL = "tag";
+    var BASE_URL = "tags";
 
-
-    var create = function () {
-        // archive api collection
+    /**
+     * 
+     * @param {*} request 
+     */
+    var create = function (request) {
+        // create api collection
     };
 
-
-    var read = function () {
-        // archive api collection
-    };
-
-
-    var update = function () {
-        // archive api collection
-    };
-
-
-    var archive = function () {
-        // archive api collection
-    };
-
-
-    var Service = function () {
+    /**
+     * 
+     * @param {*} request 
+     */
+    var read = function (request) {
         return {
-            create: create,
-            read: read,
-            update: update,
-            archive: archive
+            
+            all : function() {
+                return request.get([BASE_URL]);
+            }
         }
     };
 
+    /**
+     * 
+     * @param {*} request 
+     */
+    var update = function (request) {
+        // update api collection
+    };
 
-    angular.module('realworld.models').factory('TagModel', Service);
+
+    /**
+     * 
+     * @param {*} request 
+     */
+    var archive = function (request) {
+        // archive api collection
+    };
+
+    /**
+     * 
+     * @param {*} Request 
+     */
+    var Service = function (Request) {
+        return {
+            create  : create(Request),
+            read    : read(Request),
+            update  : update(Request),
+            archive : archive(Request)
+        }
+    };
+
+    Service.$injector = ['Request'];
+    angular.module('realworld.model').factory('TagModel', Service);
 })()
