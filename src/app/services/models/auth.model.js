@@ -32,5 +32,5 @@
     };
 
 
-    angular.module('realworld.models').factory('AuthModel', Service);
+    angular.module('realworld.model').factory('AuthModel', Service);
 })()
