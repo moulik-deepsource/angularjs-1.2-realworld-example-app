@@ -1,0 +1,21 @@
+{
+  "name": "angularjs-1.2-realworld-example-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.10",
+    "angular": "^1.2.*",
+    "angular-jwt": "^0.1.9"
+  },
+  "devDependencies": {
+    "express": "^4.14.1"
+  },
+  "scripts": {
+    "start": "node ./build/monitor.js",
+    "build": "node ./build/build/build.dist.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
